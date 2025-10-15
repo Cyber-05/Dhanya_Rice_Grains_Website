@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhanya Rice Grains | Premium Rice</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="brand">
+      Dhanya<span class="highlight"> Rice</span> Grains
+    </div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+      <a href="#cart" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+
+  <!-- Floating Logo -->
+  <img src="images/logo.png" alt="Logo" class="floating-logo" />
+
+  <div class="hero-content" data-aos="fade-up">
+    <h1>Welcome to Dhanya Rice Grains</h1>
+    <p>Parvathi Parameshwara Rice Mill, a trusted name in premium rice processing and supply under the Dhanya Grains banner. Located in the agricultural heartland of [Region/City — insert exact location], our mill combines tradition with modern methods to deliver the finest quality rice to kitchens and markets across the region.
+       Our Legacy & Vision:-
+
+       Founded with a passion for grains and a commitment to quality, Parvathi Parameshwara Rice Mill aims to uphold the rich heritage of rice cultivation while embracing innovation. Our mission is to supply rice that is pure, nutritious, and flavorful — matching the discerning standards of our customers.Premium quality rice for health & taste.</p>
+    <a href="#products" class="btn btn-primary">Shop Now</a>
+  </div>
+</section>
+
+<section id="about" class="about" data-aos="fade-up">
+  <div class="about-overlay"></div>
+  <div class="about-content">
+    <h2>About Us</h2>
+    <p>
+      At Parvathi Parameshwara Rice Mill, we believe in tradition, purity, and innovation.  
+      Dhanya Rice Grains brings you the finest rice — white, brown, and gold — maintaining nutrition and aroma.
+      <p>(Location :- Mylavaram Mandal,Chandra Gudem, Andhra Pradesh , India.)</p>
+    </p>
+  </div>
+</section>
+
+
+  <section id="products" class="products">
+    <h2 data-aos="fade-up">Our Rice Varieties</h2>
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card" data-aos="zoom-in">
+        <img src="images/rice_white.png" alt="Premium White Rice" />
+        <h3>Premium White Rice</h3>
+        <p>Fragrant polished white rice with supreme quality.</p>
+        <span class="price">₹60 / kg</span>
+        <button class="btn btn-secondary buy-btn" data-name="Premium White Rice" data-price="60">Add to Cart</button>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/rice_brown.png" alt="Premium Brown Rice" />
+        <h3>Premium Brown Rice</h3>
+        <p>Unpolished, fiber-rich brown rice for wellness.</p>
+        <span class="price">₹80 / kg</span>
+        <button class="btn btn-secondary buy-btn" data-name="Premium Brown Rice" data-price="80">Add to Cart</button>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
+        <img src="images/rice_gold.png" alt="Gold Premium Rice" />
+        <h3>Gold Premium Rice</h3>
+        <p>Superior, aromatic, and luxurious rice blend.</p>
+        <span class="price">₹100 / kg</span>
+        <button class="btn btn-secondary buy-btn" data-name="Gold Premium Rice" data-price="100">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <section id="cart" class="cart-section" data-aos="fade-up">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div id="cart-total">Total: ₹0</div>
+    <button id="checkout-btn" class="btn btn-primary">Proceed to Checkout</button>
+  </section>
+
+  <section id="checkout" class="checkout-section" data-aos="fade-up">
+    <h2>Checkout</h2>
+    <div class="checkout-form">
+      <label>Full Name: <input type="text" id="checkout-name" required /></label>
+      <label>Address: <textarea id="checkout-address" rows="3" required></textarea></label>
+      <label>Payment Method:
+        <select id="payment-method" required>
+          <option value="">-- Select --</option>
+          <option value="card">Card / Online Payment</option>
+          <option value="cod">Cash on Delivery</option>
+        </select>
+      </label>
+      <div id="card-details" style="display: none;">
+        <label>Card Number: <input type="text" id="card-number" maxlength="16" /></label>
+        <label>Expiry (MM/YY): <input type="text" id="card-expiry" maxlength="5" /></label>
+        <label>CVV: <input type="text" id="card-cvv" maxlength="3" /></label>
+      </div>
+      <button id="pay-btn" class="btn btn-primary">Pay Now</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>{Created By Kulwanth Kotagiri} [Owners :- Suraneni Vineetha and Suraneni Pavan © 2025 Dhanya Rice Grains. All rights reserved.]</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000,
+      easing: 'ease-in-out',
+    });
+  </script>
+</body>
+</html>

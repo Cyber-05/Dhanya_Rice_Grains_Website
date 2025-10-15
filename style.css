@@ -1,0 +1,364 @@
+/* Reset + Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #fafafa;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header / Navbar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.brand .highlight {
+  color: #a0522d;
+}
+.nav a {
+  margin: 0 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+}
+.nav a:hover {
+  color: #a0522d;
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -3px;
+  width: 0; height: 2px;
+  background: #a0522d;
+  transition: width 0.3s ease;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/hero_bg.png') center/cover no-repeat;
+  animation: zoom-bg 20s ease-in-out infinite alternate;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  animation: fadeInSlide 2s ease forwards;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  padding: 0 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Floating Logo Animation */
+.floating-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  animation: floatLogo 4s ease-in-out infinite;
+  z-index: 2;
+}
+
+/* About Section */
+.about {
+  position: relative;
+  padding: 80px 20px;
+  background: url('images/about_bg.png') center/cover no-repeat;
+  color: #fff;
+  animation: zoom-bg 25s ease-in-out infinite alternate;
+}
+.about-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  animation: fadeInSlide 2s ease forwards;
+}
+.about-content {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+/* Keyframes for animations */
+@keyframes zoom-bg {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatLogo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* Products Section */
+.products {
+  padding: 80px 20px;
+  text-align: center;
+}
+.products h2 {
+  margin-bottom: 40px;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.product-card h3, .product-card p, .product-card .price {
+  margin: 15px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+.btn-primary {
+  background: #ffd700;
+  color: #333;
+}
+.btn-primary:hover {
+  background: #e6c200;
+  transform: scale(1.05);
+}
+.btn-secondary {
+  background: #a0522d;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #8b4513;
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+.contact form {
+  max-width: 500px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact input, .contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Cart Section */
+.cart-section {
+  padding: 60px 20px;
+  background: #fff8dc;
+  text-align: center;
+}
+#cart-items {
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: left;
+}
+#cart-items p {
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+#cart-total {
+  margin: 20px 0;
+  font-weight: bold;
+}
+#checkout-btn {
+  margin-bottom: 30px;
+}
+
+/* Checkout Section */
+.checkout-section {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+.checkout-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+.checkout-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+.checkout-form input, .checkout-form textarea, .checkout-form select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#pay-btn {
+  align-self: center;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  background: #fafafa;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Animations */
+.anim-slide-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideIn 1s forwards;
+}
+.anim-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+.delay1 {
+  animation-delay: 0.5s;
+}
+.delay2 {
+  animation-delay: 1s;
+}
+@keyframes slideIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.floating-logo {
+  position: absolute;
+  top: 20px; /* move it a bit higher */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px; /* bigger width */
+  max-width: 40vw; /* bigger responsive max size */
+  z-index: 5;
+  animation: floatLogo 3s ease-in-out infinite;
+  border-radius: 30px; /* more rounded edges */
+  overflow: hidden; /* ensure rounding works */
+}
+
+
+@keyframes floatLogo {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -15px); }
+}
+
+/* Add spacing BETWEEN hero and about */
+#home {
+  margin-bottom: 80px;  /* space BELOW hero section */
+}
+
+#about {
+  margin-top: 80px;     /* space ABOVE about section */
+}
+
+/* Keep parallax backgrounds fixed */
+.hero, .about {
+  background-attachment: fixed;
+}
+
