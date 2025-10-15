@@ -2,6 +2,8 @@
 
 Welcome to the Food Delivery Website repository created by K.V.S Kulwanth! 🍽️
 
+site is live at https://cyber-05.github.io/Dhanya_Rice_Grains_Website/
+
 ## Description
 
 This project is a dynamic and user-friendly food delivery website developed using HTML, CSS, and JavaScript. It offers an immersive experience for users to browse, select, and order from a wide range of culinary options.
