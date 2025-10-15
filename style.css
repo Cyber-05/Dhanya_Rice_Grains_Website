@@ -90,7 +90,7 @@ a {
 .hero {
   position: relative;
   min-height: 100vh;
-  background: url('images/hero_bg.jpg') cover no-repeat;
+  background: url('images/hero_bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
