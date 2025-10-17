@@ -2,7 +2,8 @@
 
 Welcome to the Food Delivery Website repository created by K.V.S Kulwanth! 🍽️
 
-site is live at https://cyber-05.github.io/Dhanya_Rice_Grains_Website/
+# Dhanya Site is live at https://cyber-05.github.io/Dhanya_Rice_Grains_Website/
+# Solar Explorer website is live at https://cipher0508.42web.io/ 
 
 ## Description
 
